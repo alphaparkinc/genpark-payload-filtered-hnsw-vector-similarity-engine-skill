@@ -1,0 +1,41 @@
+{
+  "name": "genpark-payload-filtered-hnsw-vector-similarity-engine-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Payload filtered HNSW vector similarity engine with scalar quantization and geo-spatial metadata filtering.",
+  "author": "genpark",
+  "category": "vector-database",
+  "tags": [
+    "qdrant",
+    "vector-search",
+    "hnsw-index",
+    "payload-filtering",
+    "scalar-quantization"
+  ],
+  "inputs": {
+    "query_vector_dim": {
+      "type": "integer"
+    },
+    "payload_filters": {
+      "type": "object"
+    },
+    "top_k": {
+      "type": "integer"
+    }
+  },
+  "outputs": {
+    "search_id": {
+      "type": "string"
+    },
+    "points_scanned_count": {
+      "type": "integer"
+    },
+    "search_latency_p99_ms": {
+      "type": "number"
+    },
+    "scalar_quantization_active": {
+      "type": "boolean"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
